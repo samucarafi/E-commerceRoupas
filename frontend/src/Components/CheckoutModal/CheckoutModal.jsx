@@ -11,10 +11,7 @@ const CheckoutModal = ({ isOpen, hideCheckout, cart }) => {
     0
   );
 
-  initMercadoPago(
-    import.meta.env.VITE_MERCADO_PAGO_PUBLIC_KEY ||
-      import.meta.env.MERCADO_PAGO_PUBLIC_KEY
-  );
+  initMercadoPago(import.meta.env.VITE_MERCADO_PAGO_PUBLIC_KEY);
 
   const createPreference = async () => {
     setIsProcessing(true);
@@ -32,7 +29,7 @@ const CheckoutModal = ({ isOpen, hideCheckout, cart }) => {
 
       // Fazer requisição para o backend criar a preferência
       const response = await axios.post(
-        import.meta.env.VITE_API_URL || import.meta.env.API_URL,
+        import.meta.env.VITE_API_URL,
         orderData,
         {
           headers: {
