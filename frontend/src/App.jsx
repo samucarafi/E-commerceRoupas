@@ -8,6 +8,9 @@ import CartSidebar from "./Components/CartSidebar/CartSidebar";
 import CheckoutModal from "./Components/CheckoutModal/CheckoutModal";
 import Header from "./Pages/Header/Header";
 import ProductsPage from "./Pages/ProductsPage/ProductsPage";
+import SuccessPage from "./Pages/SuccessPage/SuccessPage";
+import FailurePage from "./Pages/FailurePage/FailurePage";
+import PendingPage from "./Pages/PendingPage/PendingPage";
 function App() {
   const {
     cart,
@@ -29,6 +32,9 @@ function App() {
           <Route path="/produtos" element={<ProductsPage />} />
           <Route path="/sobre" element={<AboutPage />} />
           <Route path="/contato" element={<ContactPage />} />
+          <Route path="/success" element={<SuccessPage />} />
+          <Route path="/failure" element={<FailurePage />} />
+          <Route path="/pending" element={<PendingPage />} />
         </Routes>
 
         <CartSidebar
