@@ -5,7 +5,7 @@ const productsData = [
   {
     id: 1,
     name: "Vestido Floral Elegante",
-    price: 159.9,
+    price: 2,
     image: "👗",
     category: "Vestidos",
   },
