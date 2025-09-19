@@ -10,7 +10,8 @@ const CheckoutModal = ({ isOpen, hideCheckout, cart }) => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
+  console.log(import.meta.env.VITE_MERCADO_PAGO_PUBLIC_KEY);
+  console.log(import.meta.env.VITE_API_URL);
   initMercadoPago(import.meta.env.VITE_MERCADO_PAGO_PUBLIC_KEY);
 
   const createPreference = async () => {
