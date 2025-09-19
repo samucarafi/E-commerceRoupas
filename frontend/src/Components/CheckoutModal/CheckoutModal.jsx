@@ -26,7 +26,7 @@ const CheckoutModal = ({ isOpen, hideCheckout, cart }) => {
 
       // Fazer requisição para o backend criar a preferência
       const response = await axios.post(
-        "http://localhost:4000/create-preference",
+        import.meta.env.API_URL || "http://localhost:4000/create-preference",
         orderData,
         {
           headers: {
