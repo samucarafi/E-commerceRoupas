@@ -32,7 +32,7 @@ const CheckoutModal = ({ isOpen, hideCheckout, cart }) => {
 
       // Fazer requisição para o backend criar a preferência
       const response = await axios.post(
-        import.meta.env.API_URL || "http://localhost:4000/create-preference",
+        import.meta.env.VITE_API_URL || import.meta.env.API_URL,
         orderData,
         {
           headers: {
